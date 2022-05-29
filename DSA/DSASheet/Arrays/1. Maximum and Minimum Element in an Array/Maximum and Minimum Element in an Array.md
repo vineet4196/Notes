@@ -1,17 +1,17 @@
 
-#Problem:  Find Maximum and minimum of an array using minimum number of comparisons
+# Problem:  Find Maximum and minimum of an array using minimum number of comparisons
 
-Solution:
+**Solution** :
 
-###################################################### Mehtod 1 #####################################################
-To solve in java create :
+
+**Pair DataStructure** :
 
 static class pair {
 int max;
 int min;
 }
 
-Brute force:  (Simple Linear Search) 
+## 1. Brute force:  (Simple Linear Search) 
 
  1. Take two variables min & max;
 
@@ -30,25 +30,18 @@ Brute force:  (Simple Linear Search)
         else if arr[i] < min: 
             min = arr[i]
             
-Complextiy: O(n)
-Comparisons: 1 + 2(n -2) in worst case (if all elements sorted in decreasing order) 
+**Complextiy** : O(n)
+**Comparisons** : 1 + 2(n -2) in worst case (if all elements sorted in decreasing order) 
                         and 1 + n - 2 Comparisons in Best case
-Space: O(1)
+**Space** : O(1)
 
 
 ###################################################### Mehtod 2 #####################################################
 
 
-(Tournament Method) : Recursive Solution
+## (Tournament Method) : Recursive Solution
 
-To solve in java create :
-
-static class pair {
-int max;
-int min;
-}
-
-1. Take two variables max and min.
+1. Take two variables **max** and **min**.
 
 2. if arraylength == 1:
     return element as both max and min
@@ -69,10 +62,10 @@ int min;
 
 
 
-Complextiy: O(n)
-Space: O(log n) // same as a binary tree
+**Complextiy**: O(n)
+**Space**: O(log n) // same as a binary tree
 
-Comparisons:
+**Comparisons**:
 
 Mathematical formula:
 
@@ -88,11 +81,14 @@ After solving the above recursion, we get
 
   T(n)  = 3n/2 -2
   
-Thus, the approach does 3n/2 -2 comparisons if n is a power of 2. And it does more than 3n/2 -2 comparisons if n is not a power of 2.
+Thus, the approach does **3n/2 -2** comparisons **if n is a power of 2**. And it does more than **3n/2 -2** comparisons** if n is not a power of 2**.
 
 
 
 ###################################################### Mehtod 3 #####################################################
+
+## Optimal Method:
+
 To solve in java create :
 
 static class pair {
@@ -146,17 +142,21 @@ IDEA: idea is to do comparison in paris and increment loop by 2.
 
 
 
-Analysis:
+**Analysis**:
 
-Time Complexity: O(n)
+**Time Complexity**: O(n)
 
-Auxiliary Space: O(1) as no extra space was needed.
+**Auxiliary Space**: O(1) as no extra space was needed.
 
-Total number of comparisons: Different for even and odd n, see below: 
+**Total number of comparisons**: Different for even and odd n, see below: 
 
-       If n is odd:    3*(n-1)/2  
-       If n is even:   1 Initial comparison for initializing min and max, 
+       **If n is odd** :    3(n-1)/2      (starting loop from **i = 1** So **n - 1** element left. There are total **three** comparisons **(n - 1)/2** times. Divide by 2 because increment i as **i = i + 2** )
+       
+       **If n is even** :   1 Initial comparison for initializing min and max, 
                            and 3(n-2)/2 comparisons for rest of the elements  
-                      =  1 + 3*(n-2)/2 = 3n/2 -2
-Second and third approaches make the equal number of comparisons when n is a power of 2. 
-In general, method 3 seems to be the best.
+                           
+                      =  1 + 3(n-2)/2 = 3n/2 -2
+                      
+Second and third approaches make the **equal number of comparisons** when n is a power of 2. 
+
+In general, method 3 seems to be the best because no recursive call as recursive call stroage use stack internally.
