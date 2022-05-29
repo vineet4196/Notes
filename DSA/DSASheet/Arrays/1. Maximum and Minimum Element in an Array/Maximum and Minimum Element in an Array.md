@@ -31,6 +31,7 @@ int min;
             min = arr[i]
             
 **Complextiy** : O(n)
+
 **Comparisons** : 1 + 2(n -2) in worst case (if all elements sorted in decreasing order) 
                         and 1 + n - 2 Comparisons in Best case
 **Space** : O(1)
@@ -80,9 +81,6 @@ After solving the above recursion, we get
   
 Thus, the approach does **3n/2 -2** comparisons **if n is a power of 2**. And it does more than **3n/2 -2** comparisons** if n is not a power of 2**.
 
-
-
-###################################################### Mehtod 3 #####################################################
 
 ## 3. Optimal Method:
 
