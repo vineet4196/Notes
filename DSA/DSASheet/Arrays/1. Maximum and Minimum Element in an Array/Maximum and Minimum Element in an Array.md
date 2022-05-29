@@ -36,10 +36,7 @@ int min;
 **Space** : O(1)
 
 
-###################################################### Mehtod 2 #####################################################
-
-
-## (Tournament Method) : Recursive Solution
+## 2. (Tournament Method) : Recursive Solution
 
 1. Take two variables **max** and **min**.
 
@@ -87,7 +84,7 @@ Thus, the approach does **3n/2 -2** comparisons **if n is a power of 2**. And it
 
 ###################################################### Mehtod 3 #####################################################
 
-## Optimal Method:
+## 3. Optimal Method:
 
 To solve in java create :
 
