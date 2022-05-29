@@ -84,14 +84,7 @@ Thus, the approach does **3n/2 -2** comparisons **if n is a power of 2**. And it
 
 ## 3. Optimal Method:
 
-To solve in java create :
-
-static class pair {
-int max;
-int min;
-}
-
-IDEA: idea is to do comparison in paris and increment loop by 2.
+**IDEA**: idea is to do comparison in paris and increment loop by 2.
 
 
  1. Take two variables min & max;
