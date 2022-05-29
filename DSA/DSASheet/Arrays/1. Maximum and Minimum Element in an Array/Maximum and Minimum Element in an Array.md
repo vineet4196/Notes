@@ -1,7 +1,7 @@
 
 # Problem:  Find Maximum and minimum of an array using minimum number of comparisons
 
-**Solution** :
+### Solution :
 
 
 **Pair DataStructure** :
@@ -123,7 +123,7 @@ IDEA: idea is to do comparison in paris and increment loop by 2.
      PsuedoCode:
 
         // compare in pairs
-        while (i < n - 1) {
+        `while (i < n - 1) {
             if (arr[i] < arr[i + 1]) {
                 if (arr[i] < minMax.min)
                     minMax.min = arr[i];
@@ -138,7 +138,7 @@ IDEA: idea is to do comparison in paris and increment loop by 2.
                     minMax.max = arr[i];
             }
             i = i + 2;
-        }
+        }`
 
 
 
@@ -150,12 +150,13 @@ IDEA: idea is to do comparison in paris and increment loop by 2.
 
 **Total number of comparisons**: Different for even and odd n, see below: 
 
-       **If n is odd** :    3(n-1)/2      (starting loop from **i = 1** So **n - 1** element left. There are total **three** comparisons **(n - 1)/2** times. Divide by 2 because increment i as **i = i + 2** )
+       **If n is odd** :    3(n-1)/2      (starting loop from i = 1 So n - 1 element left. There are total three comparisons (n - 1)/2 times. Divide by 2 because increment i as i = i + 2 )
        
        **If n is even** :   1 Initial comparison for initializing min and max, 
                            and 3(n-2)/2 comparisons for rest of the elements  
                            
                       =  1 + 3(n-2)/2 = 3n/2 -2
+                      
                       
 Second and third approaches make the **equal number of comparisons** when n is a power of 2. 
 
